@@ -1,4 +1,4 @@
-[jobs.lexer]
+[jobs.test-submit]
 
 image = { source = "dockerfile", path = ".", tag = "pascal-lex-example" }
 
