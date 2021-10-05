@@ -1,5 +1,5 @@
 import java.util.*;
-public class TEST {
+public class program {
 
     public static boolean F(char[] fuhao ,char ch){
         int i=0;
@@ -36,7 +36,7 @@ public class TEST {
                 if(line.charAt(i)==' ' ||  line.charAt(i)=='\t'){
                         i++;
                         continue;
-                }else if(Character.isLetter(line.charAt(i)) || line.charAt(i)=='_'){//是标识符或者是关键字
+                }else if(Character.isLetter(line.charAt(i)) || line.charAt(i)=='_'){//key or biaoshi
                     int temp=i;
                     i++;
                     while(i<line.length() && (Character.isLetter(line.charAt(i)) || Character.isDigit(line.charAt(i)) || line.charAt(i)=='_')){
@@ -44,17 +44,17 @@ public class TEST {
                     }
                     String tempstr=line.substring(temp,i);
                     boolean judge=false;
-                    for(int j=0;j<key1Arr.length;j++){//判断是否是关键字
+                    for(int j=0;j<key1Arr.length;j++){//key
                         if(tempstr.equals(key1Arr[j])){
                             System.out.println(key2Arr[j]);
                             judge=true;
                             break;
                         }
                     }
-                    if(!judge){//不是关键字就是标识符
+                    if(!judge){
                         System.out.println("Ident("+tempstr+")");
                     }
-                }else if(Character.isDigit(line.charAt(i))){//判断是无符号整数
+                }else if(Character.isDigit(line.charAt(i))){//usigned int
                     int temp=i;
                     i++;
                     while(i<line.length() && Character.isDigit(line.charAt(i))){
@@ -103,7 +103,6 @@ public class TEST {
 
 
             }
-            //System.out.println(line);
 
         }
 
