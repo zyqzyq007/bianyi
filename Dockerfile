@@ -1,4 +1,3 @@
-FROM openjdk:14
+FROM openjdk:15
+COPY . /app/
 WORKDIR /app/
-COPY program.java ./
-RUN javac program.java
