@@ -1,7 +1,7 @@
-[jobs.lab8]
+[jobs.mdarray]
 
 image = { source = "dockerfile", path = "." }
 
 run = [
-  "java -jar bianyi01.jar $input $ir",
+  "java -jar bianyi01.jar $input >$ir",
 ]
