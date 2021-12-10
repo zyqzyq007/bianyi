@@ -1,7 +1,7 @@
-[jobs.lexer]
+[jobs.short_circuit]
 
-image = { source = "dockerfile", path = ".", tag = "pascal-lex-example" }
+image = { source = "dockerfile", path = "." }
 
 run = [
-  "java program <$input",
+  "java -jar bianyi01.jar $input >$ir",
 ]
